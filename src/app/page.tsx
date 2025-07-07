@@ -7,23 +7,18 @@ import { useEffect, useState } from "react";
 const socialLinks = [
   {
     icon: FaGithub,
-    href: "https://github.com/yourusername",
+    href: "https://github.com/nikhilmeenaa",
     label: "GitHub",
   },
   {
     icon: FaLinkedin,
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/nikhil-meena-8152771a1/",
     label: "LinkedIn",
   },
   {
     icon: FaInstagram,
-    href: "https://instagram.com/yourusername",
+    href: "https://www.instagram.com/nikhilkameena/",
     label: "Instagram",
-  },
-  {
-    icon: FaTwitter,
-    href: "https://twitter.com/yourusername",
-    label: "Twitter",
   },
 ];
 
@@ -375,7 +370,7 @@ export default function Home() {
             </div>
             <div className="mt-8">
               <a
-                href="https://yourportfolio.com"
+                href="https://www.nikhilmeena.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300 font-semibold text-lg hover:underline"

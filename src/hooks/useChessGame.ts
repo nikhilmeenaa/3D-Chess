@@ -245,6 +245,11 @@ export const useChessGame = () => {
 
     setGameState((prev) => ({ ...prev, isAIThinking: true }));
 
+    // Add a random delay between 1.5 to 3 seconds to make AI feel more natural
+    const minDelay = 1500; // 1.5 seconds minimum
+    const maxDelay = 3000; // 3 seconds maximum
+    const randomDelay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
+
     setTimeout(() => {
       const moves = chess.moves({ verbose: true });
       if (moves.length > 0) {
@@ -260,7 +265,7 @@ export const useChessGame = () => {
         makeMove((selectedMove as any).from, (selectedMove as any).to);
       }
       setGameState((prev) => ({ ...prev, isAIThinking: false }));
-    }, 1000);
+    }, randomDelay);
   }, [gameState.isAIEnabled, chess, gameState.gameStatus, makeMove]);
 
   const resetGame = useCallback(() => {
